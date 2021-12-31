@@ -19,9 +19,9 @@ public class Graphics implements Disposable {
 	}
 
 	public void update() {
+		screenClearer.update();
 		polygonRenderer.update();
 		spriteRenderer.update();
-		screenClearer.update();
 	}
 
 	@Override

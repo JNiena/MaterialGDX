@@ -1,31 +1,23 @@
 package materialgdx.modules;
 
 import com.badlogic.gdx.utils.Disposable;
-import materialgdx.networking.client.ClientManager;
-import materialgdx.networking.server.ServerManager;
+import materialgdx.networking.NetworkManager;
 
 public class Network implements Disposable {
 
-	private ClientManager clientManager;
-	private ServerManager serverManager;
+	private NetworkManager networkManager;
 
 	public Network() {
-		this.clientManager = new ClientManager();
-		this.serverManager = new ServerManager();
+		this.networkManager = new NetworkManager();
 	}
 
-	public ClientManager getClientManager() {
-		return clientManager;
-	}
-
-	public ServerManager getServerManager() {
-		return serverManager;
+	public NetworkManager getNetworkManager() {
+		return networkManager;
 	}
 
 	@Override
 	public void dispose() {
-		clientManager.dispose();
-		serverManager.dispose();
+		networkManager.dispose();
 	}
 
 }
